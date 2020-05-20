@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "del /s /q dist",
+    "clean": "rimraf dist/**/*",
     "eleventy:default": "npx eleventy",
     "eleventy:watch": "npx eleventy --watch",
     "styles:prod": "node-sass src/styles/ --importer node_modules/node-sass-package-importer/dist/cli.js --output dist/styles/ && postcss ./dist/styles/*.css --replace",
@@ -17,7 +17,8 @@
     "build": "run-s clean styles:prod scripts:prod eleventy:default --print-label"
   },
   "devDependencies": {
-    "light-server": "2.6.4"
+    "light-server": "2.6.4",
+    "rimraf": "^3.0.2"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.9.0",
