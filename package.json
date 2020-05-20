@@ -14,9 +14,10 @@
     "serve": "light-server -c .lightserverrc",
     "dev": "npm-run-all clean styles:dev scripts:dev eleventy:default --parallel eleventy:watch serve --print-label",
     "dev:debug": "DEBUG=* npm run dev",
-    "build": "run-s clean styles:prod scripts:prod eleventy:default --print-label"
+    "build": "cross-env ELEVENTY_ENV=production run-s clean styles:prod scripts:prod eleventy:default --print-label"
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
     "light-server": "2.6.4",
     "rimraf": "^3.0.2"
   },

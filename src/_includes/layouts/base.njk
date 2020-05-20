@@ -2,6 +2,9 @@
 <html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
+  {% if project.environment == "production" %}
+  <base href="/portfolio/">
+  {% endif %}
   <script>
     document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'has-js ';
   </script>
