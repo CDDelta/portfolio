@@ -1,5 +1,46 @@
 ---
 layout: layouts/base.njk
-title: Title Strings
+title: Portfolio
 ---
-<h1>This is global data: {{siteData.name}}</h1>
+
+<header class="bg-dark fixed-top">
+  <nav class="navbar navbar-expand-md navbar-dark container container-fluid">
+    <a class="navbar-brand" href="#">{{ title }}</a>
+    <span class="flex-grow-1"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto mb-2 mb-md-0">
+        <li class="nav-item active">
+          <a class="nav-link" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+</header>
+
+<section class="jumbotron jumbotron-fluid vh-100">
+  <div class="container d-flex align-items-center h-100">
+    <div>
+      <img class="img-fluid" src="images/octocat.png">
+    </div>
+    <div>
+      <h1 class="display-4">Welcome to my portfolio!</h1>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <small>&copy; CDDelta, {{ page.date.getFullYear() }}</small>
+</footer>
