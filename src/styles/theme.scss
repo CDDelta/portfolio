@@ -1,0 +1,20 @@
+$primary: #fdb92a;
+$secondary: #4c56c0;
+
+$body-bg: #fff;
+
+// Typography
+$font-family-base: "Work Sans", sans-serif;
+
+$display4-weight: 500;
+
+.display-4 {
+  letter-spacing: -3px;
+}
+
+// Components
+$btn-font-weight: 500;
+
+.btn {
+  text-transform: uppercase;
+}

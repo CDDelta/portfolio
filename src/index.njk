@@ -11,7 +11,7 @@ title: Portfolio
       aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="d-none collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto mb-2 mb-md-0">
         <li class="nav-item active">
           <a class="nav-link" aria-current="page" href="#">Home</a>
@@ -27,20 +27,36 @@ title: Portfolio
 </header>
 
 <section class="jumbotron jumbotron-fluid vh-100">
-  <div class="container d-flex align-items-center h-100">
-    <div>
-      <img class="img-fluid" src="images/octocat.png">
+  <div class="container h-100 d-flex flex-column flex-md-row align-items-center">
+    <div class="p-4 p-lg-5">
+      <img class="img-fluid" src="media/images/octocat.png">
     </div>
-    <div>
-      <h1 class="display-4">Welcome to my portfolio!</h1>
+    <div class="w-75">
+      <h1 class="display-4 text-uppercase">Welcome to my portfolio!</h1>
       <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
         aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
         fugiat nulla pariatur.</p>
+      <div class="d-flex">
+        {% for profileId, profile in socialProfiles %}
+        <a class="p-2" href="{{ profile.url }}" target="_none" rel="noopener">
+          <img src="media/svgs/{{ profileId }}.svg" height="40" width="40" inline>
+        </a>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>
 
-<footer>
-  <small>&copy; CDDelta, {{ page.date.getFullYear() }}</small>
-</footer>
+<section class="container">
+  <h2 class="text-center">About Me</h2>
+</section>
+
+<section class="container">
+  <h2 class="text-center">Projects</h2>
+</section>
+
+<section class="container">
+  <h2 class="text-center">My Articles</h2>
+  <a class="btn btn-primary" href="{{ socialProfiles.dev.url }}" role="button">Read More</a>
+</section>

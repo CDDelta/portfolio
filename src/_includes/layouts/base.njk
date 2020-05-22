@@ -13,10 +13,15 @@
   <meta name="description" content="{{ renderData.description or description or metadata.description }}">
   <title>{{ renderData.title or title or metadata.title }}</title>
   <link rel="stylesheet" href="styles/custom.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet"> 
 </head>
 
 <body id="top" itemscope itemtype="http://schema.org/WebPage">
   {{ content | safe }}
+
+  {% include "../components/footer.njk" %}
+
   <script src="scripts/index.js"></script>
 </body>
 

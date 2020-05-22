@@ -1,0 +1,12 @@
+<footer class="p-3 text-center">
+  <a href="https://github.com/cddelta/porfolio" target="_blank" rel="noopener">
+    <small>Designed & built by me</small>
+  </a>
+  <div class="d-flex justify-content-center">
+    {% for profileId, profile in socialProfiles %}
+    <a class="p-2" href="{{ profile.url }}" target="_none" rel="noopener">
+      <img src="media/svgs/{{ profileId }}.svg" height="30" width="30" inline>
+    </a>
+    {% endfor %}
+  </div>
+</footer>
