@@ -7,14 +7,18 @@
   <base href="/portfolio/">
   {% endif %}
   <script>
-    document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'has-js ';
+    document.documentElement.className = document
+      .documentElement
+      .className
+      .replace(/\bno-js\b/g, '') + 'has-js ';
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="{{ renderData.description or description or metadata.description }}">
   <title>{{ renderData.title or title or metadata.title }}</title>
   <link rel="stylesheet" href="styles/custom.css">
 
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+  {{ head_include | safe }}
 </head>
 
 <body id="top" itemscope itemtype="http://schema.org/WebPage">

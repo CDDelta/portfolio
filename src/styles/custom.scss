@@ -1,4 +1,27 @@
-@import "./theme.scss";
+$primary: #fdb92a;
+$secondary: #4c56c0;
+
+$body-bg: #fff;
+
+// Typography
+$font-family-base: "Work Sans", sans-serif;
+
+$display4-weight: 500;
+
+.display-4 {
+  letter-spacing: -3px;
+}
+
+// Components
+html {
+  scroll-behavior: smooth;
+}
+
+$btn-font-weight: 500;
+
+.btn {
+  text-transform: uppercase;
+}
 
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
@@ -32,22 +55,4 @@
 
 .flex-even {
   flex: 1;
-}
-
-section {
-  padding: map-get($spacers, 5) 0px;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-section#contact {
-  background: rgba(0, 0, 0, 0) url("../media/images/contact-bg.png") repeat
-    scroll 0% 0%;
-  background-size: 600px;
-
-  .lead {
-    max-width: 600px;
-  }
 }

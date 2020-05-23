@@ -1,0 +1,17 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+section {
+  padding: map-get($spacers, 5) 0px;
+}
+
+section#contact {
+  background: transparent url("../media/images/contact-bg.png") repeat scroll 0%
+    0%;
+  background-size: 600px;
+
+  .lead {
+    max-width: 600px;
+  }
+}
