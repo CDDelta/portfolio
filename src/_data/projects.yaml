@@ -1,8 +1,8 @@
 - title: ngx-monetization
-  description: "An Angular library for the Web Monetization API. Built for the DEV x Grant for the Web Hackathon."
+  description: 'An Angular library for the Web Monetization API. Built for the DEV x Grant for the Web Hackathon.'
 
 - title: dart-version-auto-tagger
-  description: "A GitHub Action that automatically creates Git tags for you whenever you update your Dart package.yaml. Built for the GitHub Actions Hackathon."
+  description: 'A GitHub Action that automatically creates Git tags for you whenever you update your Dart package.yaml. Built for the GitHub Actions Hackathon.'
 
 - title: sms fact checker
-  description: "Testing 123"
+  description: 'Testing 123'

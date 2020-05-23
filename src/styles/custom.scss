@@ -4,7 +4,7 @@ $secondary: #4c56c0;
 $body-bg: #fff;
 
 // Typography
-$font-family-base: "Work Sans", sans-serif;
+$font-family-base: 'Work Sans', sans-serif;
 
 $display4-weight: 500;
 
@@ -23,31 +23,31 @@ $btn-font-weight: 500;
   text-transform: uppercase;
 }
 
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
 
-@import "~bootstrap/scss/reboot";
-@import "~bootstrap/scss/type";
-@import "~bootstrap/scss/images";
-@import "~bootstrap/scss/code";
-@import "~bootstrap/scss/grid";
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/images';
+@import '~bootstrap/scss/code';
+@import '~bootstrap/scss/grid';
 
-@import "~bootstrap/scss/buttons";
-@import "~bootstrap/scss/card";
-@import "~bootstrap/scss/jumbotron";
-@import "~bootstrap/scss/nav";
-@import "~bootstrap/scss/navbar";
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/card';
+@import '~bootstrap/scss/jumbotron';
+@import '~bootstrap/scss/nav';
+@import '~bootstrap/scss/navbar';
 
-@import "~bootstrap/scss/utilities/background";
-@import "~bootstrap/scss/utilities/display";
-@import "~bootstrap/scss/utilities/flex";
-@import "~bootstrap/scss/utilities/position";
-@import "~bootstrap/scss/utilities/shadows";
-@import "~bootstrap/scss/utilities/sizing";
-@import "~bootstrap/scss/utilities/spacing";
-@import "~bootstrap/scss/utilities/stretched-link";
-@import "~bootstrap/scss/utilities/text";
+@import '~bootstrap/scss/utilities/background';
+@import '~bootstrap/scss/utilities/display';
+@import '~bootstrap/scss/utilities/flex';
+@import '~bootstrap/scss/utilities/position';
+@import '~bootstrap/scss/utilities/shadows';
+@import '~bootstrap/scss/utilities/sizing';
+@import '~bootstrap/scss/utilities/spacing';
+@import '~bootstrap/scss/utilities/stretched-link';
+@import '~bootstrap/scss/utilities/text';
 
 .w-maxc {
   width: max-content;
