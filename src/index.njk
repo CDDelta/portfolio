@@ -44,7 +44,7 @@ head_include: '
         fugiat nulla pariatur.</p>
       <a class="btn btn-primary mb-3" href="#contact">Get in Touch</a>
       <div class="d-flex mb-3">
-        {% for profileId, profile in socialProfiles %}
+        {% for profileId, profile in about.socials %}
         <a class="p-2" href="{{ profile.url }}" target="_none" rel="noopener">
           <img class="icon" src="media/svgs/{{ profileId }}.svg" height="40" width="40">
         </a>
@@ -130,7 +130,7 @@ head_include: '
     </article>
     {% endfor %}
   </div>
-  <a class="btn btn-primary w-maxc" href="{{ socialProfiles.dev.url }}" target="_blank" rel="noopener">See All</a>
+  <a class="btn btn-primary w-maxc" href="{{ about.socials.dev.url }}" target="_blank" rel="noopener">See All</a>
 </section>
 
 <section id="contact">
