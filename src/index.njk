@@ -34,11 +34,10 @@ head_include: '
 
 <section class="jumbotron jumbotron-fluid min-vh-100 d-flex flex-column justify-content-center">
   <div class="container h-100 d-flex flex-column flex-md-row align-items-center">
-    <div class="p-4 p-lg-5">
-      <img class="img-fluid" src="media/images/octocat.png">
-    </div>
     <div class="w-100 w-md-75">
-      <h1 class="display-4 text-uppercase">Welcome to my portfolio!</h1>
+      <h4>Hi, I am</h4>
+      <h1 class="display-3">CDDelta</h1>
+      <h1 class="display-4">I hack and build stuff with code</h1>
       <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
         aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
@@ -58,7 +57,7 @@ head_include: '
 <section id="about" class="container">
   <h2 class="text-center">About Me</h2>
   <div class="d-flex flex-column flex-md-row">
-    <div class="flex-even">
+    <div>
       <p>{{ about.biography }}</p>
 
       <div class="d-flex flex-column flex-md-row">
@@ -80,7 +79,6 @@ head_include: '
         </div>
       </div>
     </div>
-    <div class="flex-even"></div>
   </div>
 </section>
 
@@ -115,9 +113,7 @@ head_include: '
   <h2 class="text-center">My Articles</h2>
   <p class="text-center">I write sometimes. Read about my development experiences below!</p>
   <div class="d-flex flex-column flex-lg-row ustify-content-around mb-3">
-    {% for article in dev
-        .articles
-        .slice(0, 3) %}
+    {% for article in dev.articles.slice(0, 3) %}
     <article class="card flex-even m-3">
       <img src="{{ article.cover_image }}" class="card-img-top">
       <div class="card-body">
