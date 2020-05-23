@@ -89,7 +89,7 @@ head_include: '
     <div class="d-flex flex-column flex-lg-row flex-wrap justify-content-center">
       {% for project in projects %}
       <div class="card m-3">
-        <div class="row no-gutters">
+        <div class="row no-gutters h-100">
           <div class="card-body">
             <h5 class="card-title">{{ project.title }}</h5>
             <p class="card-text">{{ project.description }}</p>
@@ -98,12 +98,14 @@ head_include: '
               <span class="badge badge-pill badge-secondary">{{ item }}</span>
               {% endfor %}
             </p>
-            {% for linkId, link in project.links %}
-            <a class="p-2" href="{{ link }}" target="_none" rel="noopener">
-              <img class="icon" src="media/svgs/{{ linkId }}.svg" height="30" width="30">
-            </a>
-            {% endfor %}
           </div>
+        </div>
+        <div class="card-footer">
+          {% for linkId, link in project.links %}
+          <a class="p-2" href="{{ link }}" target="_none" rel="noopener">
+            <img class="icon" src="media/svgs/{{ linkId }}.svg" height="30" width="30">
+          </a>
+          {% endfor %}
         </div>
       </div>
       {% endfor %}
