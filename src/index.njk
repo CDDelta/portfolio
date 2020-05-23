@@ -54,11 +54,11 @@ title: Portfolio
 
 <section class="container">
   <h2 class="text-center">About Me</h2>
-  <div class="d-flex">
+  <div class="d-flex flex-column flex-md-row">
     <div class="flex-even">
       <p>{{ about.biography }}</p>
 
-      <div class="d-flex">
+      <div class="d-flex flex-column flex-md-row">
         <div class="flex-even">
           <p>Skills:</p>
           <ul>
@@ -108,7 +108,7 @@ title: Portfolio
 
 <section class="container d-flex flex-column align-items-center">
   <h2 class="text-center">My Articles</h2>
-  <p>I write sometimes. Read about my development experiences below!</p>
+  <p class="text-center">I write sometimes. Read about my development experiences below!</p>
   <div class="d-flex flex-column flex-md-row ustify-content-around">
     {% for article in dev.articles.slice(0, 3) %}
     <article class="card flex-even m-3">
