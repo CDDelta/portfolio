@@ -2,6 +2,12 @@
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/mixins';
 
+.jumbotron {
+  background: url('../media/svgs/jumbotron-bg.svg') no-repeat;
+  background-size: cover;
+  background-color: $light;
+}
+
 section {
   padding: map-get($spacers, 5) 0;
 
