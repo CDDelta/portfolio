@@ -1,5 +1,9 @@
-module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy('src/media')
+const yaml = require("js-yaml");
+
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addDataExtension("yaml", contents => yaml.safeLoad(contents));
+
+  eleventyConfig.addPassthroughCopy('src/media');
 
   return {
     dir: { input: 'src', output: 'dist', data: '_data' },
