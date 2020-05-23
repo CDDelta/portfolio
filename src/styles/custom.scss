@@ -40,3 +40,7 @@
 section {
   padding: map-get($spacers, 5) 0px;
 }
+
+html {
+  scroll-behavior: smooth;
+}
