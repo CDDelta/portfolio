@@ -46,4 +46,8 @@ section#contact {
   background: rgba(0, 0, 0, 0) url("../media/images/contact-bg.png") repeat
     scroll 0% 0%;
   background-size: 600px;
+
+  .lead {
+    max-width: 600px;
+  }
 }
