@@ -90,17 +90,19 @@ head_include: '
       {% for project in projects %}
       <div class="card m-3 flex-grow-1">
         <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="..." class="card-img" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">{{ project.title }}</h5>
-              <p class="card-text">{{ project.description }}</p>
-              <p class="card-text">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </p>
-            </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ project.title }}</h5>
+            <p class="card-text">{{ project.description }}</p>
+            <p>
+              {% for item in project.stack %}
+              <span class="badge badge-pill badge-secondary">{{ item }}</span>
+              {% endfor %}
+            </p>
+            {% for linkId, link in project.links %}
+            <a class="p-2" href="{{ link }}" target="_none" rel="noopener">
+              <img class="icon" src="media/svgs/{{ linkId }}.svg" height="30" width="30">
+            </a>
+            {% endfor %}
           </div>
         </div>
       </div>

@@ -1,8 +1,33 @@
 - title: ngx-monetization
-  description: 'An Angular library for the Web Monetization API. Built for the DEV x Grant for the Web Hackathon.'
+  description: >-
+    An Angular library for the Web Monetization API.
+    Built for the DEV x Grant for the Web Hackathon.
+  stack:
+    - Angular
+    - RxJS
+    - TypeScript
+  links:
+    github: https://github.com/CDDelta/ngx-monetization
+    # external: https://cddelta.github.io/ngx-monetization/
 
-- title: dart-version-auto-tagger
-  description: 'A GitHub Action that automatically creates Git tags for you whenever you update your Dart package.yaml. Built for the GitHub Actions Hackathon.'
+- title: dart-version-auto-tag
+  description: >-
+    A GitHub Action that automatically creates Git tags for you whenever you update your Dart package.yaml.
+    Built for the GitHub Actions Hackathon.
+  stack:
+    - GitHub API
+    - TypeScript
+  links:
+    github: https://github.com/CDDelta/dart-version-auto-tag
 
-- title: sms fact checker
-  description: 'Testing 123'
+- title: SMS Chain Text Fact Checker
+  description: >-
+    A prototype of a fact checker for SMS chain texts with a dashboard for fact checkers and an SMS chatbot for users.
+    Built for the DEV x Twilio Hackathon.
+  stack:
+    - Angular
+    - Twilio
+    - Firebase (Auth/Hosting/Firestore/Functions)
+    - TypeScript
+  links:
+    github: https://github.com/CDDelta/covid-19-fact-checker
