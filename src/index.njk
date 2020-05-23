@@ -14,19 +14,22 @@ title: Portfolio
     <div class="d-none collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto mb-2 mb-md-0">
         <li class="nav-item active">
-          <a class="nav-link" aria-current="page" href="#">Home</a>
+          <a class="nav-link" aria-current="page" href="#">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          <a class="nav-link" href="#">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
         </li>
       </ul>
     </div>
 </header>
 
-<section class="jumbotron jumbotron-fluid vh-100">
+<section class="jumbotron jumbotron-fluid d-flex flex-column justify-content-center">
   <div class="container h-100 d-flex flex-column flex-md-row align-items-center">
     <div class="p-4 p-lg-5">
       <img class="img-fluid" src="media/images/octocat.png">
@@ -37,10 +40,11 @@ title: Portfolio
         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
         aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
         fugiat nulla pariatur.</p>
-      <div class="d-flex">
+      <a class="btn btn-primary mb-3">Get in Touch</a>
+      <div class="d-flex mb-3">
         {% for profileId, profile in socialProfiles %}
         <a class="p-2" href="{{ profile.url }}" target="_none" rel="noopener">
-          <img src="media/svgs/{{ profileId }}.svg" height="40" width="40" inline>
+          <img class="icon" src="media/svgs/{{ profileId }}.svg" height="40" width="40" inline>
         </a>
         {% endfor %}
       </div>
@@ -50,16 +54,63 @@ title: Portfolio
 
 <section class="container">
   <h2 class="text-center">About Me</h2>
+  <div class="d-flex">
+    <div class="flex-even">
+      <p>{{ about.biography }}</p>
+
+      <div class="d-flex">
+        <div class="flex-even">
+          <p>Skills:</p>
+          <ul>
+            {% for skill in about.skills %}
+            <li>{{ skill.name }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="flex-even">
+          <p>Learning/Trying:</p>
+          <ul>
+            {% for learning in about.learning %}
+            <li>{{ learning.name }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="flex-even">
+
+    </div>
+  </div>
 </section>
 
 <section class="container">
   <h2 class="text-center">Projects</h2>
+  <p class="text-center">Here are some of the things that I've worked on.</p>
+  <div class="d-flex flex-wrap">
+    {% for project in projects %}
+    <div class="card m-3 flex-grow-1">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="..." class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{ project.title }}</h5>
+            <p class="card-text">{{ project.description }}</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 </section>
 
 <section class="container d-flex flex-column align-items-center">
   <h2 class="text-center">My Articles</h2>
+  <p>I write sometimes. Read about my development experiences below!</p>
   <div class="d-flex flex-column flex-md-row ustify-content-around">
-    {% for article in dev.articles.slice(0, 3) -%}
+    {% for article in dev.articles.slice(0, 3) %}
     <article class="card flex-even m-3">
       <img src="{{ article.cover_image }}" class="card-img-top">
       <div class="card-body">
@@ -70,7 +121,15 @@ title: Portfolio
         </p>
       </div>
     </article>
-    {%- endfor %}
+    {% endfor %}
   </div>
-  <a class="btn btn-primary w-maxc" href="{{ socialProfiles.dev.url }}" role="button">See All</a>
+  <a class="btn btn-primary w-maxc" href="{{ socialProfiles.dev.url }}" target="_blank" rel="noopener">See All</a>
+</section>
+
+<section class="container text-center d-flex flex-column align-items-center">
+  <h2>Get in Touch</h2>
+  <p class="lead">Have a question? Want to have a chat? My inbox is always open! Just shoot me a message and I'll
+    get back to
+    you ASAP.</p>
+  <a class="btn btn-secondary w-maxc" target="_blank" rel="noopener">Say Hello</a>
 </section>

@@ -32,3 +32,11 @@
 .flex-even {
   flex: 1;
 }
+
+.jumbotron {
+  min-height: 100vh;
+}
+
+section {
+  padding: map-get($spacers, 4) 0px;
+}
