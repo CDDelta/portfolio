@@ -56,7 +56,21 @@ title: Portfolio
   <h2 class="text-center">Projects</h2>
 </section>
 
-<section class="container">
+<section class="container d-flex flex-column align-items-center">
   <h2 class="text-center">My Articles</h2>
-  <a class="btn btn-primary" href="{{ socialProfiles.dev.url }}" role="button">Read More</a>
+  <div class="d-flex flex-column flex-md-row ustify-content-around">
+    {% for article in dev.articles.slice(0, 3) -%}
+    <article class="card flex-even m-3">
+      <img src="{{ article.cover_image }}" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">{{ article.title }}</h5>
+        <p class="card-text">{{ article.description }}</p>
+        <p class="card-text">
+          <a class="stretched-link" href="{{ article.url }}">Continue reading</a>
+        </p>
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+  <a class="btn btn-primary w-maxc" href="{{ socialProfiles.dev.url }}" role="button">See All</a>
 </section>
