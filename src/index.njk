@@ -37,11 +37,8 @@ head_include: '
     <div class="w-100 w-md-75">
       <h4>Hi, I am</h4>
       <h1 class="display-3">CDDelta</h1>
-      <h1 class="display-4">I hack and build stuff with code</h1>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-        fugiat nulla pariatur.</p>
+      <h1 class="display-4">{{ about.tagline }}</h1>
+      <p class="lead">{{ about.introduction }}</p>
       <a class="btn btn-primary mb-3" href="#contact">Get in Touch</a>
       <div class="d-flex mb-3">
         {% for profileId, profile in about.socials %}
