@@ -3,7 +3,7 @@ biography: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius
 skills:
   - name: Angular
   - name: Firebase
-  - name: Javascript/Typescript
+  - name: JavaScript/TypeScript
 
 learning:
   - name: Data Science/Machine Learning
