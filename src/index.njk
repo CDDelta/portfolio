@@ -84,7 +84,7 @@ head_include: '
   <div class="container">
     <h2 class="text-center">Projects</h2>
     <p class="text-center">Here are some of the things that I've worked on.</p>
-    <div class="d-flex flex-column flex-lg-row flex-wrap justify-content-center">
+    <div class="d-flex flex-column flex-lg-row flex-lg-wrap justify-content-center">
       {% for project in projects %}
       <div class="card m-3">
         <div class="row no-gutters h-100">
@@ -114,7 +114,7 @@ head_include: '
 <section id="blog" class="container d-flex flex-column align-items-center">
   <h2 class="text-center">My Articles</h2>
   <p class="text-center">I write sometimes. Read about my development experiences below!</p>
-  <div class="d-flex flex-column flex-lg-row ustify-content-around mb-3">
+  <div class="d-flex flex-column flex-lg-row justify-content-around mb-3">
     {% for article in dev.articles.slice(0, 3) %}
     <article class="card flex-even m-3">
       <img src="{{ article.cover_image }}" class="card-img-top">
