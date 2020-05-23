@@ -86,9 +86,9 @@ head_include: '
   <div class="container">
     <h2 class="text-center">Projects</h2>
     <p class="text-center">Here are some of the things that I've worked on.</p>
-    <div class="d-flex flex-wrap">
+    <div class="d-flex flex-column flex-lg-row flex-wrap justify-content-center">
       {% for project in projects %}
-      <div class="card m-3 flex-grow-1">
+      <div class="card m-3">
         <div class="row no-gutters">
           <div class="card-body">
             <h5 class="card-title">{{ project.title }}</h5>

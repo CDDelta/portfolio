@@ -19,3 +19,7 @@ section#contact {
     max-width: 600px;
   }
 }
+
+#projects .card {
+  flex: 0 calc(50% - 2rem);
+}
