@@ -3,7 +3,11 @@
 @import "~bootstrap/scss/mixins";
 
 section {
-  padding: map-get($spacers, 5) 0px;
+  padding: map-get($spacers, 5) 0;
+
+  h2 {
+    padding-top: map-get($spacers, 4);
+  }
 }
 
 section#contact {
