@@ -17,6 +17,8 @@ jobs:
     - run: |
          npm ci
          npm run build
+      env:
+        DEV_API_KEY: ${{ secrets.DEV_API_KEY }}
     - uses: JamesIves/github-pages-deploy-action@releases/v2
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
