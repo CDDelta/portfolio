@@ -1,6 +1,6 @@
 const Cache = require("@11ty/eleventy-cache-assets");
 
-const devApiKey = require('../../secrets.json').devApiKey || process.env.DEV_API_KEY;
+const devApiKey = process.env.DEV_API_KEY || require('../../secrets.json').devApiKey;
 
 module.exports = async function () {
   console.log("Fetching recent DEV articles...");
