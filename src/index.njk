@@ -45,7 +45,8 @@ eleventyComputed:
       <a class="btn btn-primary mb-3" href="#contact">Get in Touch</a>
       <div class="d-flex mb-3">
         {% for profileId, profile in about.socials %}
-        <a class="p-2" href="{{ profile.url }}" title="{{ profile.name }}" target="_none" rel="noopener">
+        <a class="p-2" href="{{ profile.url }}" title="{{ profile.name }}" aria-label="{{ profile.name }}"
+          target="_none" rel="noopener">
           <img class="icon" src="media/svgs/{{ profileId }}.svg" alt="" height="40" width="40">
         </a>
         {% endfor %}
@@ -102,7 +103,8 @@ eleventyComputed:
         </div>
         <div class="card-footer">
           {% for linkId, link in project.links %}
-          <a class="p-2" href="{{ link.url }}" title="{{ link.name}}" target="_none" rel="noopener">
+          <a class="p-2" href="{{ link.url }}" title="{{ link.name }}" aria-label="{{ link.name }}" target="_none"
+            rel="noopener">
             <img class="icon" src="media/svgs/{{ linkId }}.svg" alt="" height="30" width="30">
           </a>
           {% endfor %}
