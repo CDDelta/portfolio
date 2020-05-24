@@ -1,16 +1,17 @@
-tagline: I hack and build stuff with code
+tagline: I hack and build stuff with code.
 introduction: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  I am a developer based in Melbourne, Australia, in love with building interesting and innovative products on the web
+  from the frontend to the backend.
 
-biography: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+biography: '
+  I am CDDelta, a developer based in Melbourne, Australia.
+  My passion is building things that live on the web, websites, applications, backends, you name it!
+  I am in love with the web platform and all it has to offer.'
 
 skills:
   - name: Angular
   - name: Firebase
+  - name: Node.js
   - name: JavaScript/TypeScript
 
 learning:
@@ -25,3 +26,6 @@ socials:
   dev:
     name: DEV
     url: https://dev.to/cddelta
+  # kaggle:
+  #  name: Kaggle
+  #  url: https://www.kaggle.com/cddelta
