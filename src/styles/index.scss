@@ -6,6 +6,10 @@
   background: url('../media/svgs/jumbotron-bg.svg') no-repeat;
   background-size: cover;
   background-color: $light;
+
+  .lead {
+    max-width: 750px;
+  }
 }
 
 section {
