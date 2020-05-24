@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: Portfolio
+title: CDDelta | Hacker & Developer
 head_include: '
 <link rel="stylesheet" href="styles/index.css">
 <script type="text/javascript" src="scripts/index.js"></script>
@@ -9,7 +9,7 @@ head_include: '
 
 <header class="bg-light shadow fixed-top">
   <nav class="navbar navbar-light navbar-expand-md container container-fluid">
-    <a class="navbar-brand" href="#">{{ title }}</a>
+    <a class="navbar-brand" href="#">CDDelta</a>
     <span class="flex-grow-1"></span>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
       aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,8 +17,8 @@ head_include: '
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto mb-2 mb-md-0">
-        <li class="nav-item active">
-          <a class="nav-link" aria-current="page" href="#about">About</a>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#projects">Projects</a>
@@ -53,14 +53,14 @@ head_include: '
 </section>
 
 <section id="about" class="container">
-  <h2 class="text-center">About Me</h2>
+  <h2 class="text-center mb-4">About Me</h2>
   <div class="d-flex flex-column flex-md-row">
     <div>
       <p>{{ about.biography }}</p>
 
       <div class="d-flex flex-column flex-md-row">
         <div class="flex-even">
-          <p>Skills:</p>
+          <p>Here's a few technologies I've recently worked with:</p>
           <ul>
             {% for skill in about.skills %}
             <li>{{ skill.name }}</li>
@@ -68,7 +68,7 @@ head_include: '
           </ul>
         </div>
         <div class="flex-even">
-          <p>Learning/Trying:</p>
+          <p>I am also learning/trying:</p>
           <ul>
             {% for learning in about.learning %}
             <li>{{ learning.name }}</li>
