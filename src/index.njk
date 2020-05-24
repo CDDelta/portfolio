@@ -5,6 +5,8 @@ head_include: '
 <link rel="stylesheet" href="styles/index.css">
 <script type="text/javascript" src="scripts/index.js"></script>
 '
+eleventyComputed:
+  description: "{{ about.introduction }}"
 ---
 
 <header class="bg-light shadow fixed-top">
@@ -43,8 +45,8 @@ head_include: '
       <a class="btn btn-primary mb-3" href="#contact">Get in Touch</a>
       <div class="d-flex mb-3">
         {% for profileId, profile in about.socials %}
-        <a class="p-2" href="{{ profile.url }}" target="_none" rel="noopener">
-          <img class="icon" src="media/svgs/{{ profileId }}.svg" height="40" width="40">
+        <a class="p-2" href="{{ profile.url }}" title="{{ profile.name }}" target="_none" rel="noopener">
+          <img class="icon" src="media/svgs/{{ profileId }}.svg" alt="" height="40" width="40">
         </a>
         {% endfor %}
       </div>
@@ -100,8 +102,8 @@ head_include: '
         </div>
         <div class="card-footer">
           {% for linkId, link in project.links %}
-          <a class="p-2" href="{{ link }}" target="_none" rel="noopener">
-            <img class="icon" src="media/svgs/{{ linkId }}.svg" height="30" width="30">
+          <a class="p-2" href="{{ link.url }}" title="{{ link.name}}" target="_none" rel="noopener">
+            <img class="icon" src="media/svgs/{{ linkId }}.svg" alt="" height="30" width="30">
           </a>
           {% endfor %}
         </div>
@@ -117,7 +119,7 @@ head_include: '
   <div class="d-flex flex-column flex-lg-row justify-content-around mb-3">
     {% for article in dev.articles.slice(0, 3) %}
     <article class="card flex-even m-3">
-      <img src="{{ article.cover_image }}" class="card-img-top">
+      <img class="card-img-top" loading="lazy" src="{{ article.cover_image }}" alt="">
       <div class="card-body">
         <h5 class="card-title">{{ article.title }}</h5>
         <p class="card-text">{{ article.description }}</p>

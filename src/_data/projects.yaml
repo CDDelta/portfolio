@@ -7,7 +7,9 @@
     - RxJS
     - TypeScript
   links:
-    github: https://github.com/CDDelta/ngx-monetization
+    github:
+      name: GitHub Repo
+      url: https://github.com/CDDelta/ngx-monetization
     # external: https://cddelta.github.io/ngx-monetization/
 
 - title: dart-version-auto-tag
@@ -18,7 +20,9 @@
     - GitHub API
     - TypeScript
   links:
-    github: https://github.com/CDDelta/dart-version-auto-tag
+    github:
+      name: GitHub Repo
+      url: https://github.com/CDDelta/dart-version-auto-tag
 
 - title: SMS Chain Text Fact Checker
   description: >-
@@ -30,4 +34,6 @@
     - Firebase (Auth/Hosting/Firestore/Functions)
     - TypeScript
   links:
-    github: https://github.com/CDDelta/covid-19-fact-checker
+    github:
+      name: GitHub Repo
+      url: https://github.com/CDDelta/covid-19-fact-checker
