@@ -13,6 +13,7 @@ skills:
   - name: Firebase
   - name: Node.js
   - name: JavaScript/TypeScript
+  - name: GitHub Actions (CI/CD)
 
 learning:
   - name: Data Science/Machine Learning
