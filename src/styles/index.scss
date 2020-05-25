@@ -12,6 +12,32 @@
   }
 }
 
+.jumbotron-content {
+  animation-name: bounce-in-from-top;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.2s;
+  animation-duration: 1s;
+}
+
+@keyframes bounce-in-from-top {
+  from {
+    transform: translateY(-100vh);
+  }
+  50% {
+    transform: translateY(10%);
+  }
+  75% {
+    transform: translateY(-2%);
+  }
+  90% {
+    transform: translateY(0.5%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 section {
   padding: map-get($spacers, 5) 0;
 
