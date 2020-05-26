@@ -3,6 +3,9 @@
 
 <head>
   <meta charset="utf-8">
+  {% if config.environment == "production" %}
+  <base href="/portfolio/">
+  {% endif %}
   <script>
     document.documentElement.className = document
       .documentElement
