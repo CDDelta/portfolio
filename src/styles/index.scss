@@ -3,8 +3,19 @@
 @import '~bootstrap/scss/mixins';
 
 header {
-  animation: bounce-in-from-top 1.2s ease-in-out both;
+  animation: slide-down 0.4s ease-out backwards;
   animation-delay: 0.2s;
+  transition: transform 0.2s ease-out;
+
+  &.header-hide {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+  }
 }
 
 .jumbotron {
