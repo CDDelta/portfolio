@@ -2,6 +2,14 @@
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/mixins';
 
+header {
+  animation-name: bounce-in-from-top;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.2s;
+  animation-duration: 1.2s;
+}
+
 .jumbotron {
   background: url('../media/svgs/jumbotron-bg.svg') no-repeat;
   background-size: cover;
