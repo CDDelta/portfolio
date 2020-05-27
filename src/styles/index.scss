@@ -34,7 +34,7 @@
     transform: translateY(0.5%);
   }
   to {
-    transform: translateY(0);
+    transform: none;
   }
 }
 
@@ -51,7 +51,7 @@
     transform: scale(0) rotate(360deg);
   }
   to {
-    transform: scale(1) rotate(0deg);
+    transform: none;
   }
 }
 
@@ -77,7 +77,8 @@ section#contact {
   flex: 0 calc(50% - 2rem);
 }
 
-#projects .card, #blog .card {
+#projects .card,
+#blog .card {
   &::after {
     box-shadow: $box-shadow-lg;
     opacity: 0;
