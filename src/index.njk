@@ -92,7 +92,7 @@ eleventyComputed:
     <p class="text-center">Here are some of the things that I've worked on.</p>
     <div class="d-flex flex-column flex-lg-row flex-lg-wrap justify-content-center">
       {% for project in projects %}
-      <div class="card m-3">
+      <div class="card m-3" style="--list-index: {{ loop.index }};">
         <div class="row no-gutters h-100">
           <div class="card-body">
             <h5 class="card-title">{{ project.title }}</h5>
@@ -123,7 +123,7 @@ eleventyComputed:
   <p class="text-center">I write sometimes. Read about my development experiences below!</p>
   <div class="d-flex flex-column flex-lg-row justify-content-around mb-3">
     {% for article in dev.articles.slice(0, 3) %}
-    <article class="card flex-even m-3">
+    <article class="card flex-even m-3" style="--list-index: {{ loop.index }};">
       <img class="card-img-top" loading="lazy" src="{{ article.cover_image }}" alt="">
       <div class="card-body">
         <h5 class="card-title">{{ article.title }}</h5>

@@ -87,6 +87,9 @@ section#contact {
 
 #projects .card,
 #blog .card {
+  animation: fade-in-right 0.6s ease-out both;
+  animation-delay: calc(var(--list-index) * 0.15s);
+
   &::after {
     box-shadow: $box-shadow-lg;
     opacity: 0;
@@ -109,5 +112,16 @@ section#contact {
     &::after {
       opacity: 1;
     }
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    transform: translateX(50vw);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
   }
 }
