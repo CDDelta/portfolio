@@ -93,7 +93,7 @@ section#contact {
 
 #projects .card,
 #blog .card {
-  animation: fade-in-right 0.6s ease-out both;
+  animation: fade-in-br 0.6s ease-out both;
   animation-delay: calc(var(--list-index) * 0.15s);
 
   &::after {
@@ -120,9 +120,9 @@ section#contact {
   }
 }
 
-@keyframes fade-in-right {
+@keyframes fade-in-br {
   from {
-    transform: translateX(50vw);
+    transform: translate(10px, 10px);
     opacity: 0;
   }
 }
