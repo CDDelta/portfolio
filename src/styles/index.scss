@@ -38,9 +38,6 @@ header {
   90% {
     transform: translateY(0.5%);
   }
-  to {
-    transform: none;
-  }
 }
 
 .jumbotron-links a {
@@ -51,9 +48,6 @@ header {
 @keyframes spin-in {
   from {
     transform: scale(0) rotate(360deg);
-  }
-  to {
-    transform: none;
   }
 }
 
@@ -112,9 +106,5 @@ section#contact {
   from {
     transform: translateX(50vw);
     opacity: 0;
-  }
-  to {
-    transform: none;
-    opacity: 1;
   }
 }
