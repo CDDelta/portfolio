@@ -76,3 +76,29 @@ section#contact {
 #projects .card {
   flex: 0 calc(50% - 2rem);
 }
+
+#projects .card, #blog .card {
+  &::after {
+    box-shadow: $box-shadow-lg;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.75s ease-in-out;
+
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &:focus-within,
+  &:hover {
+    & {
+      transform: scale(1.025);
+    }
+    &::after {
+      opacity: 1;
+    }
+  }
+}
