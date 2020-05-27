@@ -15,14 +15,26 @@ header {
   .lead {
     max-width: 750px;
   }
-}
 
-.jumbotron-content > * {
-  animation-name: bounce-in-from-top;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
-  animation-delay: calc(var(--list-index) * 0.05s + 0.1s);
-  animation-duration: 1s;
+  &.anim-paused {
+    .jumbotron-content > *,
+    .jumbotron-links a {
+      animation-play-state: paused;
+    }
+  }
+
+  .jumbotron-content > * {
+    animation-name: bounce-in-from-top;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-delay: calc(var(--list-index) * 0.05s + 0.1s);
+    animation-duration: 1s;
+  }
+
+  .jumbotron-links a {
+    animation: spin-in 0.5s cubic-bezier(0.39, 0.58, 0.57, 1) both;
+    animation-delay: calc(var(--list-index) * 0.25s);
+  }
 }
 
 @keyframes bounce-in-from-top {
@@ -38,11 +50,6 @@ header {
   90% {
     transform: translateY(0.5%);
   }
-}
-
-.jumbotron-links a {
-  animation: spin-in 0.5s cubic-bezier(0.39, 0.58, 0.57, 1) both;
-  animation-delay: calc(var(--list-index) * 0.25s);
 }
 
 @keyframes spin-in {
@@ -82,7 +89,7 @@ section#contact {
     // Reserves a space in the proper aspect ratio for the image.
     padding-bottom: percentage(420 / 1000);
   }
-  & img {
+  img {
     position: absolute;
     left: 0;
     top: 0;
@@ -91,31 +98,37 @@ section#contact {
   }
 }
 
-#projects .card,
-#blog .card {
-  animation: fade-in-br 0.6s ease-out both;
-  animation-delay: calc(var(--list-index) * 0.15s);
-
-  &::after {
-    box-shadow: $box-shadow-lg;
-    opacity: 0;
-    transition: opacity 0.3s ease-out, transform 0.75s ease-out;
-
-    content: '';
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+#projects,
+#blog {
+  &.anim-paused .card {
+    animation-play-state: paused;
   }
 
-  &:focus-within,
-  &:hover {
-    transform: scale(1.025);
+  .card {
+    animation: fade-in-br 0.6s ease-out both;
+    animation-delay: calc(var(--list-index) * 0.15s);
 
     &::after {
-      opacity: 1;
+      box-shadow: $box-shadow-lg;
+      opacity: 0;
+      transition: opacity 0.3s ease-out, transform 0.75s ease-out;
+
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &:focus-within,
+    &:hover {
+      transform: scale(1.025);
+
+      &::after {
+        opacity: 1;
+      }
     }
   }
 }
