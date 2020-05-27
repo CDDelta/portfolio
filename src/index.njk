@@ -40,11 +40,11 @@ eleventyComputed:
   <div class="container h-100 mt-5 d-flex flex-column flex-md-row align-items-center">
     <div>
       <div class="jumbotron-content w-100 w-md-75 mb-2">
-        <h4>Hi, I am</h4>
-        <h1 class="display-3">CDDelta</h1>
-        <h1 class="display-4">{{ about.tagline }}</h1>
-        <p class="lead">{{ about.introduction }}</p>
-        <a class="btn btn-primary mb-3" href="#contact">Get in Touch</a>
+        <h4 style="--list-index: 5;">Hi, I am</h4>
+        <h1 class="display-3" style="--list-index: 4;">CDDelta</h1>
+        <h1 class="display-4" style="--list-index: 3;">{{ about.tagline }}</h1>
+        <p class="lead" style="--list-index: 2;">{{ about.introduction }}</p>
+        <a class="btn btn-primary mb-3" style="--list-index: 1;" href="#contact">Get in Touch</a>
       </div>
       <div class="jumbotron-links d-flex mb-3">
         {% for profileId, profile in about.socials %}
