@@ -14,9 +14,8 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: '10.x'
-    - run: |
-         npm ci
-         npm run build
+    - run: npm ci
+    - run: npm run build
       env:
         DEV_API_KEY: ${{ secrets.DEV_API_KEY }}
     - uses: JamesIves/github-pages-deploy-action@releases/v2
