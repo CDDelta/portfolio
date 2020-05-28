@@ -8,11 +8,14 @@ $font-family-base: 'Work Sans', sans-serif;
 
 $display4-weight: 500;
 
-.display-3, .display-4 {
+.display-3,
+.display-4 {
   letter-spacing: -3px;
 }
 
 // Components
+$navbar-nav-link-padding-x: 1rem;
+
 html {
   scroll-behavior: smooth;
 }
