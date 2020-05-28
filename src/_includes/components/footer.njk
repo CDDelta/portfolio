@@ -4,9 +4,15 @@
   </a>
   <div class="d-flex justify-content-center">
     {% for profileId, profile in about.socials %}
-    <a class="p-2" href="{{ profile.url }}" title="{{ profile.name }}" aria-label="{{ profile.name }}" target="_none"
-      rel="noopener">
-      <img src="media/svgs/{{ profileId }}.svg" alt="" height="30" width="30">
+    <a
+      class="p-2"
+      href="{{ profile.url }}"
+      title="{{ profile.name }}"
+      aria-label="{{ profile.name }}"
+      target="_none"
+      rel="noopener"
+    >
+      <img src="media/svgs/{{ profileId }}.svg" alt="" height="30" width="30" />
     </a>
     {% endfor %}
   </div>
