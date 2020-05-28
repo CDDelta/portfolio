@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     {% if config.environment == "production" %}
-    <base href="/portfolio/" />
+    <base href="{{ config.base_href }}" />
     {% endif %}
     <script>
       document.documentElement.className =

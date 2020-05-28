@@ -16,7 +16,7 @@ jobs:
         node-version: '10.x'
     - run: |
          npm ci
-         npm run build
+         npm run build:prod
       env:
         DEV_API_KEY: ${{ secrets.DEV_API_KEY }}
     - uses: JamesIves/github-pages-deploy-action@releases/v2
