@@ -1,0 +1,11 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+// Disable the collapsing animation on larger screens when the navbar is not supposed to animate.
+@include media-breakpoint-up(sm) {
+  .navbar .collapsing {
+    height: initial !important;
+    transition: none !important;
+  }
+}
