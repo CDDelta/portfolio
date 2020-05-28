@@ -1,24 +1,8 @@
 import 'bootstrap/js/dist/collapse';
 
 document.addEventListener('DOMContentLoaded', () => {
-  hideHeaderWhenScrollingDown();
   watchAnimationsInViewport();
 });
-
-function hideHeaderWhenScrollingDown() {
-  const header = document.querySelector('header');
-
-  let prevScrollPos = window.pageYOffset;
-  document.addEventListener('scroll', (_) => {
-    let currentScrollPos = window.scrollY;
-
-    if (prevScrollPos > currentScrollPos)
-      header.classList.remove('header-hide');
-    else header.classList.add('header-hide');
-
-    prevScrollPos = currentScrollPos;
-  });
-}
 
 function watchAnimationsInViewport() {
   let observer = new IntersectionObserver(

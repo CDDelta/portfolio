@@ -5,11 +5,6 @@
 header {
   animation: slide-down 0.4s ease-out backwards;
   animation-delay: 0.2s;
-  transition: transform 0.2s ease-out;
-
-  &.header-hide {
-    transform: translateY(-100%);
-  }
 }
 
 @keyframes slide-down {
