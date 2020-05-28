@@ -1,46 +1,31 @@
-# Deventy
+# Portfolio
+![Deploy](https://github.com/CDDelta/portfolio/workflows/Deploy/badge.svg)
+![Lighthouse](https://github.com/CDDelta/portfolio/workflows/Lighthouse/badge.svg)
 
-A minimal 11ty starting point for building static websites with modern tools. Uses the CLI of each tool. Allowing a much easier upgrade path for each individual development tool.
+My portfolio built with Eleventy and Bootstrap, built upon the [Deventy](https://github.com/ianrose/deventy/) template by @ianrose.
 
-Features:
-- [11ty](https://www.11ty.io/)
-- [Sass/SCSS](https://github.com/sass/node-sass)
-- [Webpack](https://webpack.js.org/)
-- [Babel](https://babeljs.io/)
-- [light-server](https://github.com/txchen/light-server)
-- [PostCSS](https://postcss.org/)
-- [CSSnano](https://cssnano.co/)
-- [Autoprefixer](https://github.com/postcss/autoprefixer)
+## Features
+- Fast loading and mobile responsive.
+- CSS animations for content entrances.
+- Continuous integration with Lighthouse and Prettier.
+- Continuous deployment to GitHub Pages on master.
 
-## Getting Started
+## Development and Build
 
 Install all dependencies using npm:
 
-```
-$ nvm use
-$ npm install
-```
-
-### To Develop
-
-```
-$ npm run dev
-```
- And in debug mode:
- 
-```
-$ npm run dev:debug
+```bash
+npm install
 ```
 
-You can view the website at the given access URL:
-```
-$ light-server is listening at http://localhost:4000
+Run dev server:
+
+```bash
+npm run dev
 ```
 
-The local url is configured in `.lightserverrc`
+To build for production:
 
-### To Build
-
-```
-npm run build
+```bash
+npm run build:prod
 ```
