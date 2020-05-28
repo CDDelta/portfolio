@@ -1,4 +1,4 @@
-import 'bootstrap/js/src/collapse';
+import 'bootstrap/js/dist/collapse';
 
 document.addEventListener('DOMContentLoaded', () => {
   hideHeaderWhenScrollingDown();
