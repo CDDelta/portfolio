@@ -10,6 +10,9 @@
     github:
       name: GitHub Repo
       url: https://github.com/CDDelta/ngx-monetization
+    dev:
+      name: DEV Post
+      url: https://dev.to/cddelta/web-monetization-in-angular-with-ngx-monetization-1d07
     # external: https://cddelta.github.io/ngx-monetization/
 
 - title: dart-version-auto-tag
@@ -23,6 +26,9 @@
     github:
       name: GitHub Repo
       url: https://github.com/CDDelta/dart-version-auto-tag
+    dev:
+      name: DEV Post
+      url: https://dev.to/cddelta/hacking-more-as-an-octograd-4i1i
 
 - title: SMS Chain Text Fact Checker
   description: >-
@@ -37,3 +43,6 @@
     github:
       name: GitHub Repo
       url: https://github.com/CDDelta/covid-19-fact-checker
+    dev:
+      name: DEV Post
+      url: https://dev.to/cddelta/fact-checking-sms-with-twilio-3dn2
