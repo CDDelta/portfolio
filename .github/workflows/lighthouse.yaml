@@ -15,4 +15,6 @@ jobs:
            npm ci
            npm install -g @lhci/cli@0.4.x
       - run: npm run build
+        env:
+          DEV_API_KEY: ${{ secrets.DEV_API_KEY }}
       - run: lhci autorun
