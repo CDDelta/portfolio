@@ -1,0 +1,36 @@
+$primary: #fdb92a;
+$secondary: #4c56c0;
+
+$body-bg: #fff;
+
+// Typography
+$font-family-base: 'Work Sans', sans-serif;
+
+$display4-weight: 500;
+
+.display-3, .display-4 {
+  letter-spacing: -3px;
+}
+
+// Components
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar-collapse {
+  flex-grow: 0 !important;
+}
+
+$btn-font-weight: 500;
+
+.btn {
+  text-transform: uppercase;
+}
+
+.w-maxc {
+  width: max-content;
+}
+
+.flex-even {
+  flex: 1;
+}
