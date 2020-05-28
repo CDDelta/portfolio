@@ -11,12 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-      - run: |
-           npm ci
-           npm install -g @lhci/cli@0.4.x
+      - run: npm ci
       - run: npm run build
         env:
           DEV_API_KEY: ${{ secrets.DEV_API_KEY }}
-      - run: lhci autorun
-        env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+      - uses: treosh/lighthouse-ci-action@v3
+        with:
+          configPath: './lighthouserc.json'
+          temporaryPublicStorage: true
