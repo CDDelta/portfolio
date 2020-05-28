@@ -1,0 +1,21 @@
+name: Lighthouse
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: npm ci
+      - run: npm run build
+        env:
+          DEV_API_KEY: ${{ secrets.DEV_API_KEY }}
+      - uses: treosh/lighthouse-ci-action@v3
+        with:
+          configPath: './lighthouserc.js'
+          temporaryPublicStorage: true
