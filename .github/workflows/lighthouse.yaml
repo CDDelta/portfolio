@@ -18,3 +18,5 @@ jobs:
         env:
           DEV_API_KEY: ${{ secrets.DEV_API_KEY }}
       - run: lhci autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
