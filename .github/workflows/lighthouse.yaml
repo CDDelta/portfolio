@@ -17,5 +17,5 @@ jobs:
           DEV_API_KEY: ${{ secrets.DEV_API_KEY }}
       - uses: treosh/lighthouse-ci-action@v3
         with:
-          configPath: './lighthouserc.json'
+          configPath: './lighthouserc.js'
           temporaryPublicStorage: true
