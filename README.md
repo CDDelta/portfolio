@@ -1,10 +1,12 @@
 # Portfolio
-![Deploy](https://github.com/CDDelta/portfolio/workflows/Deploy/badge.svg)
+[![Deploy](https://github.com/CDDelta/portfolio/workflows/Deploy/badge.svg)](https://github.com/CDDelta/portfolio/actions?query=workflow%3ADeploy)
 
 My portfolio built with Eleventy and Bootstrap, built upon the [Deventy](https://github.com/ianrose/deventy/) template by @ianrose.
 
 ## Features
 - Fast loading and mobile responsive.
+  - Lighthouse score for Accessiblity, Best Practices, and SEO: 100
+  - Lighthouse score for Performance: \>95.
 - CSS animations for content entrances.
 - Articles pulled from DEV via API.
 - Continuous integration with Lighthouse and Prettier.
