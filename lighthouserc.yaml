@@ -1,6 +1,6 @@
 ci:
   assert:
-    preset: 'lighthouse:recommended'
+    preset: 'lighthouse:no-pwa'
   collect:
     staticDistDir: './dist'
   upload:
