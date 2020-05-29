@@ -1,9 +1,6 @@
 name: Lighthouse
 on:
   pull_request:
-  push:
-    branches:
-      - master
 
 jobs:
   lighthouse:
@@ -17,5 +14,5 @@ jobs:
           DEV_API_KEY: ${{ secrets.DEV_API_KEY }}
       - uses: treosh/lighthouse-ci-action@v3
         with:
-          configPath: './lighthouserc.js'
+          configPath: './lighthouserc.yaml'
           temporaryPublicStorage: true

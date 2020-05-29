@@ -1,26 +1,40 @@
 name: Deploy
 on:
-  push: 
-    branches:   
+  push:
+    branches:
       - master
 
 jobs:
-  deploy:
+  lighthouse:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-      with:
-        persist-credentials: false
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '10.x'
-    - run: npm ci
-    - run: npm run build:prod
-      env:
-        DEV_API_KEY: ${{ secrets.DEV_API_KEY }}
-    - uses: JamesIves/github-pages-deploy-action@releases/v2
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BASE_BRANCH: master
-        BRANCH: gh-pages
-        FOLDER: dist
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: npm ci
+      - run: npm run build
+        env:
+          DEV_API_KEY: ${{ secrets.DEV_API_KEY }}
+      - uses: treosh/lighthouse-ci-action@v3
+        with:
+          configPath: './lighthouserc.yaml'
+          temporaryPublicStorage: true
+  deploy:
+    needs: lighthouse
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - run: npm ci
+      - run: npm run build:prod
+        env:
+          DEV_API_KEY: ${{ secrets.DEV_API_KEY }}
+      - uses: JamesIves/github-pages-deploy-action@releases/v2
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BASE_BRANCH: master
+          BRANCH: gh-pages
+          FOLDER: dist
