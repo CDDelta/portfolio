@@ -1,5 +1,5 @@
 # Portfolio
-![Deploy](https://github.com/CDDelta/portfolio/workflows/Deploy/badge.svg)
+[![Deploy](https://github.com/CDDelta/portfolio/workflows/Deploy/badge.svg)](https://github.com/CDDelta/portfolio/actions?query=workflow%3ADeploy)
 
 My portfolio built with Eleventy and Bootstrap, built upon the [Deventy](https://github.com/ianrose/deventy/) template by @ianrose.
 
