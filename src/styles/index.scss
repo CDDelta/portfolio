@@ -106,7 +106,7 @@ section#contact {
 
 #projects,
 #blog {
-  .anim-paused .card {
+  .card.anim-paused  {
     animation-play-state: paused;
   }
 
