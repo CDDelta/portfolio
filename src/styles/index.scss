@@ -22,7 +22,7 @@ header {
     max-width: 750px;
   }
 
-  &.anim-paused {
+  .anim-paused {
     .jumbotron-content > *,
     .jumbotron-links a {
       animation-play-state: paused;
@@ -106,7 +106,7 @@ section#contact {
 
 #projects,
 #blog {
-  &.anim-paused .card {
+  .anim-paused .card {
     animation-play-state: paused;
   }
 

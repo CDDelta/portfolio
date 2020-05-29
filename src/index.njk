@@ -60,12 +60,12 @@ eleventyComputed:
 </header>
 
 <section
-  class="jumbotron jumbotron-fluid min-vh-100 d-flex flex-column justify-content-center anim-paused"
+  class="jumbotron jumbotron-fluid min-vh-100 d-flex flex-column justify-content-center"
 >
   <div
     class="container h-100 mt-5 d-flex flex-column flex-md-row align-items-center"
   >
-    <div>
+    <div class="anim-paused">
       <div class="jumbotron-content w-100 w-md-75 mb-2">
         <h4 style="--list-index: 5;">Hi, I am</h4>
         <h1 class="display-3" style="--list-index: 4;">CDDelta</h1>
@@ -128,12 +128,12 @@ eleventyComputed:
   </div>
 </section>
 
-<section id="projects" class="bg-light anim-paused">
+<section id="projects" class="bg-light">
   <div class="container">
     <h2 class="text-center">Projects</h2>
     <p class="text-center">Here are some of the things that I've worked on.</p>
     <div
-      class="d-flex flex-column flex-lg-row flex-lg-wrap justify-content-center"
+      class="d-flex flex-column flex-lg-row flex-lg-wrap justify-content-center anim-paused"
     >
       {% for project in projects %}
       <div class="card m-3" style="--list-index: {{ loop.index }};">
@@ -174,15 +174,14 @@ eleventyComputed:
   </div>
 </section>
 
-<section
-  id="blog"
-  class="container d-flex flex-column align-items-center anim-paused"
->
+<section id="blog" class="container d-flex flex-column align-items-center">
   <h2 class="text-center">My Articles</h2>
   <p class="text-center">
     I write sometimes. Read about my development experiences below!
   </p>
-  <div class="d-flex flex-column flex-lg-row justify-content-around mb-3">
+  <div
+    class="d-flex flex-column flex-lg-row justify-content-around mb-3 anim-paused"
+  >
     {% for article in dev.articles.slice(0, 3) %}
     <article class="card flex-even m-3" style="--list-index: {{ loop.index }};">
       <div class="card-img-container">

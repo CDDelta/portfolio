@@ -18,11 +18,10 @@ function watchAnimationsInViewport() {
       }
     },
     {
-      threshold: 0.3,
+      threshold: 0.1,
     },
   );
 
-  observer.observe(document.querySelector('.jumbotron'));
-  observer.observe(document.querySelector('#projects'));
-  observer.observe(document.querySelector('#blog'));
+  for (const el of document.querySelectorAll('.anim-paused'))
+    observer.observe(el);
 }
