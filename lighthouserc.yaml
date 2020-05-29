@@ -1,6 +1,11 @@
 ci:
   assert:
     preset: 'lighthouse:no-pwa'
+    assertions:
+      offscreen-images:
+        - error
+        - maxNumericValue: 3
+  
   collect:
     staticDistDir: './dist'
   upload:
