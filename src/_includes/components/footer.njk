@@ -1,18 +1,25 @@
 <footer class="p-3 text-center">
-  <a class="text-secondary" href="https://github.com/CDDelta/portfolio" target="_blank" rel="noopener">
+  <a
+    class="text-secondary"
+    href="https://github.com/CDDelta/portfolio"
+    target="_blank"
+    rel="noopener"
+  >
     <small>Designed & built by me</small>
   </a>
   <div class="d-flex justify-content-center">
     {% for profileId, profile in about.socials %}
     <a
-      class="p-2"
+      class="icon p-2"
       href="{{ profile.url }}"
       title="{{ profile.name }}"
       aria-label="{{ profile.name }}"
       target="_none"
       rel="noopener"
     >
-      <img src="media/svgs/{{ profileId }}.svg" alt="" height="30" width="30" />
+      <svg viewBox="0 0 24 24" width="30" height="30">
+        <use xlink:href="media/svgs/icons.svg#{{ profileId }}"></use>
+      </svg>
     </a>
     {% endfor %}
   </div>

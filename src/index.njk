@@ -78,7 +78,7 @@ eleventyComputed:
       <div class="jumbotron-links d-flex mb-3">
         {% for profileId, profile in about.socials %}
         <a
-          class="p-2"
+          class="icon p-3"
           href="{{ profile.url }}"
           title="{{ profile.name }}"
           aria-label="{{ profile.name }}"
@@ -86,13 +86,9 @@ eleventyComputed:
           rel="noopener"
           style="--list-index: {{ loop.index }};"
         >
-          <img
-            class="icon"
-            src="media/svgs/{{ profileId }}.svg"
-            alt=""
-            height="40"
-            width="40"
-          />
+          <svg class="icon" viewBox="0 0 24 24" width="40" height="40">
+            <use xlink:href="media/svgs/icons.svg#{{ profileId }}"></use>
+          </svg>
         </a>
         {% endfor %}
       </div>
@@ -151,20 +147,16 @@ eleventyComputed:
         <div class="card-footer">
           {% for linkId, link in project.links %}
           <a
-            class="p-2"
+            class="icon p-2"
             href="{{ link.url }}"
             title="{{ link.name }}"
             aria-label="{{ link.name }}"
             target="_none"
             rel="noopener"
           >
-            <img
-              class="icon"
-              src="media/svgs/{{ linkId }}.svg"
-              alt=""
-              height="30"
-              width="30"
-            />
+            <svg viewBox="0 0 24 24" width="30" height="30">
+              <use xlink:href="media/svgs/icons.svg#{{ linkId }}"></use>
+            </svg>
           </a>
           {% endfor %}
         </div>

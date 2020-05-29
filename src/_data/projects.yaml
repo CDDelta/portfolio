@@ -13,7 +13,9 @@
     dev:
       name: DEV Post
       url: https://dev.to/cddelta/web-monetization-in-angular-with-ngx-monetization-1d07
-    # external: https://cddelta.github.io/ngx-monetization/
+    # external:
+    #  name: Demo
+    #  url: https://cddelta.github.io/ngx-monetization/
 
 - title: dart-version-auto-tag
   description: >-
