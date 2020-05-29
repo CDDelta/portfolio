@@ -1,0 +1,27 @@
+name: PR Checks
+on:
+  pull_request:
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: npm ci
+      - run: npm run build
+        env:
+          DEV_API_KEY: ${{ secrets.DEV_API_KEY }}
+      - uses: treosh/lighthouse-ci-action@v3
+        with:
+          configPath: './lighthouserc.yaml'
+          temporaryPublicStorage: true
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}
+    - uses: creyD/prettier_action@v2.2
+      with:
+        prettier_options: --write **/*
