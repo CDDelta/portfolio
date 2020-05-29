@@ -1,4 +1,4 @@
-name: Lighthouse
+name: PR Checks
 on:
   pull_request:
 
@@ -16,3 +16,12 @@ jobs:
         with:
           configPath: './lighthouserc.yaml'
           temporaryPublicStorage: true
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}
+    - uses: creyD/prettier_action@v2.2
+      with:
+        prettier_options: --write **/*
