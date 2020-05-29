@@ -139,7 +139,7 @@ eleventyComputed:
       <div class="card m-3" style="--list-index: {{ loop.index }};">
         <div class="row no-gutters h-100">
           <div class="card-body">
-            <h5 class="card-title">{{ project.title }}</h5>
+            <h3 class="card-title">{{ project.title }}</h3>
             <p class="card-text">{{ project.description }}</p>
             <p>
               {% for item in project.stack %}
@@ -193,7 +193,7 @@ eleventyComputed:
         />
       </div>
       <div class="card-body">
-        <h5 class="card-title">{{ article.title }}</h5>
+        <h3 class="card-title">{{ article.title }}</h3>
         <p class="card-text">{{ article.description }}</p>
         <p class="card-text">
           <a

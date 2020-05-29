@@ -5,8 +5,11 @@ $body-bg: #fff;
 
 // Typography
 $font-family-base: 'Work Sans', sans-serif;
+$font-size-base: 1rem;
 
 $display4-weight: 500;
+
+$h3-font-size: $font-size-base * 1.65;
 
 // Components
 $navbar-nav-link-padding-x: 1rem;
