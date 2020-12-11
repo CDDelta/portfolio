@@ -10,7 +10,9 @@ ci:
         - warn
       uses-responsive-images:
         - warn
- 
+      uses-rel-preconnect:
+        - warn
+
   collect:
     staticDistDir: './dist'
   upload:
