@@ -10,8 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-      - run: npm ci
-      - run: npm run build
+      - run: |
+          npm ci
+          npm run build
         env:
           DEV_API_KEY: ${{ secrets.DEV_API_KEY }}
       - uses: treosh/lighthouse-ci-action@v3
@@ -28,8 +29,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '10.x'
-      - run: npm ci
-      - run: npm run build:prod
+      - run: |
+          npm ci
+          npm run build:prod
         env:
           DEV_API_KEY: ${{ secrets.DEV_API_KEY }}
       - uses: JamesIves/github-pages-deploy-action@releases/v2
