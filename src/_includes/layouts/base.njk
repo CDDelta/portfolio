@@ -1,38 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-  <head>
-    <meta charset="utf-8" />
-    {% if config.environment == "production" %}
-    <base href="{{ config.base_href }}" />
-    {% endif %}
-    <script>
-      document.documentElement.className =
-        document.documentElement.className.replace(/\bno-js\b/g, '') +
-        'has-js ';
-    </script>
-    <title>{{ renderData.title or title or metadata.title }}</title>
-    <meta
-      name="description"
-      content="{{ renderData.description or description or metadata.description }}"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <link rel="stylesheet" href="styles/common.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    {{
+<head>
+  <meta charset="utf-8" />
+  {% if config.environment == "production" %}
+  <base href="{{ config.base_href }}" />
+  {% endif %}
+  <script>
+    document.documentElement.className =
+      document.documentElement.className.replace(/\bno-js\b/g, '') +
+      'has-js ';
+  </script>
+  <title>{{ renderData.title or title or metadata.title }}</title>
+  <meta name="description" content="{{ renderData.description or description or metadata.description }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <link rel="stylesheet" href="styles/common.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "3dd2dcd8fc4a4eccad7e28923073394b"}'>
+    </script>
+  <!-- End Cloudflare Web Analytics -->
+  {{
       head_include | safe
     }}
-  </head>
+</head>
 
-  <body id="top" itemscope itemtype="http://schema.org/WebPage">
-    {{ content | safe }}
+<body id="top" itemscope itemtype="http://schema.org/WebPage">
+  {{ content | safe }}
 
-    {% include "../components/footer.njk" %}
-  </body>
+  {% include "../components/footer.njk" %}
+</body>
+
 </html>
