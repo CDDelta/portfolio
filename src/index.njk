@@ -6,52 +6,29 @@ head_include: '
 <script type="text/javascript" src="scripts/index.js"></script>
 '
 eleventyComputed:
-  description: "{{ about.introduction }}"
+description: "{{ about.introduction }}"
 ---
 
 <header class="bg-light shadow fixed-top">
   <nav class="navbar navbar-light navbar-expand-md container container-fluid">
     <a class="navbar-brand" href="#">CDDelta</a>
     <span class="flex-grow-1"></span>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarCollapse"
-      aria-controls="navbarCollapse"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto mb-2 mb-md-0">
-        <li
-          class="nav-item"
-          data-toggle="collapse"
-          data-target="#navbarCollapse"
-        >
+        <li class="nav-item" data-toggle="collapse" data-target="#navbarCollapse">
           <a class="nav-link" href="#about">About</a>
         </li>
-        <li
-          class="nav-item"
-          data-toggle="collapse"
-          data-target="#navbarCollapse"
-        >
+        <li class="nav-item" data-toggle="collapse" data-target="#navbarCollapse">
           <a class="nav-link" href="#projects">Projects</a>
         </li>
-        <li
-          class="nav-item"
-          data-toggle="collapse"
-          data-target="#navbarCollapse"
-        >
+        <li class="nav-item" data-toggle="collapse" data-target="#navbarCollapse">
           <a class="nav-link" href="#blog">Blog</a>
         </li>
-        <li
-          class="nav-item"
-          data-toggle="collapse"
-          data-target="#navbarCollapse"
-        >
+        <li class="nav-item" data-toggle="collapse" data-target="#navbarCollapse">
           <a class="nav-link" href="#contact">Contact</a>
         </li>
       </ul>
@@ -59,33 +36,20 @@ eleventyComputed:
   </nav>
 </header>
 
-<section
-  class="jumbotron jumbotron-fluid min-vh-100 d-flex flex-column justify-content-center"
->
-  <div
-    class="container h-100 mt-5 d-flex flex-column flex-md-row align-items-center"
-  >
+<section class="jumbotron jumbotron-fluid min-vh-100 d-flex flex-column justify-content-center">
+  <div class="container h-100 mt-5 d-flex flex-column flex-md-row align-items-center">
     <div class="anim-paused">
       <div class="jumbotron-content w-100 w-md-75 mb-2">
         <h4 style="--list-index: 5;">Hi, I am</h4>
         <h1 class="display-3" style="--list-index: 4;">CDDelta</h1>
         <h1 class="display-4" style="--list-index: 3;">{{ about.tagline }}</h1>
         <p class="lead" style="--list-index: 2;">{{ about.introduction }}</p>
-        <a class="btn btn-primary mb-3" style="--list-index: 1;" href="#contact"
-          >Get in Touch</a
-        >
+        <a class="btn btn-primary mb-3" style="--list-index: 1;" href="#contact">Get in Touch</a>
       </div>
       <div class="jumbotron-links d-flex mb-3">
         {% for profileId, profile in about.socials %}
-        <a
-          class="icon p-3"
-          href="{{ profile.url }}"
-          title="{{ profile.name }}"
-          aria-label="{{ profile.name }}"
-          target="_none"
-          rel="noopener"
-          style="--list-index: {{ loop.index }};"
-        >
+        <a class="icon p-3" href="{{ profile.url }}" title="{{ profile.name }}" aria-label="{{ profile.name }}"
+          target="_none" rel="noopener" style="--list-index: {{ loop.index }};">
           <svg class="icon" viewBox="0 0 24 24" width="40" height="40">
             <use xlink:href="media/svgs/icons.svg#{{ profileId }}"></use>
           </svg>
@@ -128,9 +92,7 @@ eleventyComputed:
   <div class="container">
     <h2 class="text-center">Projects</h2>
     <p class="text-center">Here are some of the things that I've worked on.</p>
-    <div
-      class="d-flex flex-column flex-lg-row flex-lg-wrap justify-content-center"
-    >
+    <div class="d-flex flex-column flex-lg-row flex-lg-wrap justify-content-center">
       {% for project in projects %}
       <div class="card m-3 anim-paused" style="--list-index: {{ loop.index }};">
         <div class="row no-gutters h-100">
@@ -146,14 +108,8 @@ eleventyComputed:
         </div>
         <div class="card-footer">
           {% for linkId, link in project.links %}
-          <a
-            class="icon p-2"
-            href="{{ link.url }}"
-            title="{{ link.name }}"
-            aria-label="{{ link.name }}"
-            target="_none"
-            rel="noopener"
-          >
+          <a class="icon p-2" href="{{ link.url }}" title="{{ link.name }}" aria-label="{{ link.name }}" target="_none"
+            rel="noopener">
             <svg viewBox="0 0 24 24" width="30" height="30">
               <use xlink:href="media/svgs/icons.svg#{{ linkId }}"></use>
             </svg>
@@ -173,41 +129,21 @@ eleventyComputed:
   </p>
   <div class="d-flex flex-column flex-lg-row justify-content-around mb-3">
     {% for article in dev.articles.slice(0, 3) %}
-    <article
-      class="card flex-even m-3 anim-paused"
-      style="--list-index: {{ loop.index }};"
-    >
+    <article class="card flex-even m-3 anim-paused" style="--list-index: {{ loop.index }};">
       <div class="card-img-container">
-        <img
-          class="card-img-top"
-          loading="lazy"
-          src="{{ article.cover_image }}"
-          alt=""
-        />
+        <img class="card-img-top" loading="lazy" src="{{ article.cover_image }}" alt="" />
       </div>
       <div class="card-body">
         <h3 class="card-title">{{ article.title }}</h3>
         <p class="card-text">{{ article.description }}</p>
         <p class="card-text">
-          <a
-            class="stretched-link"
-            href="{{ article.url }}"
-            target="_blank"
-            rel="noopener"
-            >Continue reading</a
-          >
+          <a class="stretched-link" href="{{ article.url }}" target="_blank" rel="noopener">Continue reading</a>
         </p>
       </div>
     </article>
     {% endfor %}
   </div>
-  <a
-    class="btn btn-primary w-maxc"
-    href="{{ about.socials.dev.url }}"
-    target="_blank"
-    rel="noopener"
-    >See All</a
-  >
+  <a class="btn btn-primary w-maxc" href="{{ about.socials.dev.url }}" target="_blank" rel="noopener">See All</a>
 </section>
 
 <section id="contact">
@@ -217,12 +153,6 @@ eleventyComputed:
       Have a question? Want to have a chat? My inbox is always open! Just shoot
       me a message and I'll get back to you ASAP.
     </p>
-    <a
-      class="btn btn-secondary w-maxc"
-      href="{{ about.socials.dev.url }}"
-      target="_blank"
-      rel="noopener"
-      >Say Hello</a
-    >
+    <a class="btn btn-secondary w-maxc" href="{{ about.contactLink }}" target="_blank" rel="noopener">Say Hello</a>
   </div>
 </section>

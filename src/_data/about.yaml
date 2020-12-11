@@ -19,6 +19,8 @@ learning:
   - name: Data Science/Machine Learning
   - name: Flutter
 
+contactLink: mailto:me@cddelta.dev
+
 socials:
   github:
     name: GitHub
